@@ -7,13 +7,27 @@
     <title>phone shop api</title>
     <!--daisy ui link-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body>
+    <main>
+        <section>
+            <div class="text-center mt-6">
+                <h1 class="text-[35px] font-semibold mb-4">Search your Phone</h1>
+                <input id="search-input" type="text" placeholder="Search your phone"
+                    class="input input-bordered input-info w-full max-w-xs" />
+                <button onclick="search()" class="text-[#FFFFFF] font-semibold text-xl bg-[#0D6EFD] rounded-lg items-center p-2.5 px-8">Search</button>
+            </div>
 
+            <div id="phone-cards-container" class="mt-16 grid grid-cols-3 gap-8 max-w-[1440px] mx-auto px-9">
+
+            </div>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
