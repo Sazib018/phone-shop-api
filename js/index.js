@@ -100,14 +100,4 @@ const loading = (isLoading) => {
         loaderContainer.classList.add("hidden");
     }
 };
-/* 
-const buyNowButton = document.getElementById('buy-now-button');
-const phoneCardsContainer = document.getElementById('phone-cards-container');
-
-buyNowButton.addEventListener('click', function() {
-    phoneCardsContainer.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
-}); */
 
