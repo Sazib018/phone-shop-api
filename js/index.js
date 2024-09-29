@@ -16,7 +16,6 @@ const displayData = (mobilesInformation, isShow) => {
 
     const seeAllContainer = document.getElementById('see-all-container');
 
-
     if (mobilesInformation.length <= 9) {
         seeAllContainer.classList.add('hidden');
     } else {
