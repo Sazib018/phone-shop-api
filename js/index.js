@@ -30,6 +30,13 @@ const displayData = (mobilesInformation, isShow) => {
         seeAllContainer.classList.add('hidden');
     }
 
+    document.getElementById('buy-now-button').addEventListener('click', function () {
+    document.getElementById('phone-cards-container')
+    .scrollIntoView({
+         behavior: 'smooth'
+        });
+    });
+
 
     phones.forEach((mobileInfo) => {
         const div = document.createElement('div');
@@ -85,7 +92,19 @@ const detailsButton = async (id) => {
 
     const div = document.createElement('div');
     div.innerHTML = `
-        <img src="${data.data.image}" />
+       <div>
+         <img class=" mb-10 w-[268px] h-[381px] mx-auto" src="${data.data.image}" />
+         <h2 class="text-[#403F3F] text-xl font-bold">${data.data.name}</h2>
+         <p class="text-sm text-[#706F6F] font-medium">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+         <p class="text-sm font-medium mt-3">Storage : ${data.data.mainFeatures.storage}</p>
+        <p class="text-sm font-medium">Display Size : ${data.data.mainFeatures.displaySize}</p>
+        <p class="text-sm font-medium">chipSet : ${data.data.mainFeatures.chipSet}</p>
+        <p class="text-sm font-medium">Memory : ${data.data.mainFeatures.memory}</p>
+        <p class="text-sm font-medium">Slug : ${data.data.slug}</p>
+        <p class="text-sm font-medium">Release data : ${data.data.releaseDate}</p>
+        <p class="text-sm font-medium">Brand :  ${data.data.brand}</p>
+        <p class="text-sm font-medium">GPS : ${data.data.others.GPS}</p>
+       </div>
     `;
     modalBody.appendChild(div);
 };
@@ -99,4 +118,5 @@ const loading = (isLoading) => {
         loaderContainer.classList.add("hidden");
     }
 };
+
 
